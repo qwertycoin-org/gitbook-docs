@@ -1,4 +1,5 @@
 ---
+description: >-
   Special thanks to one of our developers, blockinator. His previous
   contribution to Qwertycoin documentation made this transition seamless.
 ---
