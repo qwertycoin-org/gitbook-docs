@@ -1,5 +1,4 @@
 ---
-description: >-
   Special thanks to one of our developers, blockinator. His previous
   contribution to Qwertycoin documentation made this transition seamless.
 ---
@@ -57,7 +56,8 @@ The `#bounties channel` in the [Discord](https://qwertycoin.org/discord) has a \
 
 ## To learn more about us, check out our links: 
 
-Github Source Code: [https://github.com/qwertycoin-org](https://github.com/qwertycoin-org)  
+
+Github Source Code: [https://github.com/qwertycoin-org](https://github.com/qwertycoin-org)  
 Bitcoin Talk Thread: [https://bitcointalk.org/index.php?topic=2881418.0](https://bitcointalk.org/index.php?topic=2881418.0)  
 Daemon Download: [https://github.com/qwertycoin-org/qwertycoin/releases](https://github.com/qwertycoin-org/qwertycoin/releases)  
 Desktop Wallet\(GUI\) Download: [https://github.com/qwertycoin-org/qwertycoin-gui/releases](https://github.com/qwertycoin-org/qwertycoin-gui/releases)  
