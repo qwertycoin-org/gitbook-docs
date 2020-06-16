@@ -6,12 +6,12 @@ description: >-
 
 # Introduction to Qwertycoin
 
-Qwertycoin is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.  
-  
-One of Qwertycoin's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun and friendly.  
-  
-Qwertycoin's code is forked from the Karbowanec and Bytecoin code, and it has majorly the same privacy features you'll find in Monero and Aeon. Every transaction is private.  
-  
+Qwertycoin is a fast, easy and private cryptocurrency which allows you to send money to friends and businesses.
+
+One of Qwertycoin's main goals is to make things as simple and as accessible as possible for everyday people, creating a cryptocurrency which is inviting, fun and friendly.
+
+Qwertycoin's code is forked from the Karbowanec and Bytecoin code, and it has majorly the same privacy features you'll find in Monero and Aeon. Every transaction is private.
+
 Some of the main features of Qwertycoin include:
 
 * On-chain privacy
@@ -55,8 +55,7 @@ Check the [Github Repo](https://github.com/qwertycoin-org/qwertycoin) for more i
 
 The `#bounties channel` in the [Discord](https://qwertycoin.org/discord) has a \(pinned\) list of bounties offered to users who can help improve functionality in existing tools/make a tool which can be used.
 
-## To learn more about us, check out our links: 
-
+## To learn more about us, check out our links:
 
 Github Source Code: [https://github.com/qwertycoin-org](https://github.com/qwertycoin-org)  
 Bitcoin Talk Thread: [https://bitcointalk.org/index.php?topic=2881418.0](https://bitcointalk.org/index.php?topic=2881418.0)  

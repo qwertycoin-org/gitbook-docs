@@ -1,6 +1,6 @@
 # Hosting Web Wallet
 
-![](.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 The Qwertycoin web wallet does everything client-side to give the best privacy to users. The API servers are currently only used to optimize the communication with the daemon and compress the blockchain.
 
