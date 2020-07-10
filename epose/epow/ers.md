@@ -1,2 +1,0 @@
-# EPoW Reward System
-

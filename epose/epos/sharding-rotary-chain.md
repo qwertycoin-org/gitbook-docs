@@ -1,2 +1,0 @@
-# Sharding \(Rotary Chain\)
-

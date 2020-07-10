@@ -1,2 +1,0 @@
-# CIMA Difficulty Algorithm
-

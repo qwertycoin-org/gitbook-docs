@@ -7,20 +7,6 @@
 * [Terminology](getting-started/terminology.md)
 * [Simple Steps](getting-started/simple-steps.md)
 
-## QWC Consensus <a id="epose"></a>
-
-* [What is EPoSe \(Egalitarian Proof of Service\)?](epose/what-is-epose.md)
-* [Egalitarian Proof of Work \(EPoW\)](epose/epow/README.md)
-  * [Double Spending Proof](epose/epow/double-spending-proof.md)
-  * [EPoW Reward System](epose/epow/ers.md)
-  * [CIMA Difficulty Algorithm](epose/epow/cima.md)
-* [Egalitarian Proof of Stake \(EPoS\)](epose/epos/README.md)
-  * [EPoS Block Reward System](epose/epos/epos-block-reward-system.md)
-  * [Hybrid PoW + PoS Consensus](epose/epos/hybrid-pow-+-pos-consensus.md)
-  * [Genesis Reference Block \(GRB\)](epose/epos/genesis-reference-block-grb.md)
-  * [Sharding \(Rotary Chain\)](epose/epos/sharding-rotary-chain.md)
-  * [Lightening Memory Mapped Database \(LMDB\)](epose/epos/lightening-memory-mapped-database-lmdb.md)
-
 ## Wallet
 
 * [Types of Wallet](wallet/types-of-wallet.md)
