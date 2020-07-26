@@ -32,9 +32,9 @@ Some of the main features of Qwertycoin include:
 * Ticker: QWC 
 * Type: 0% Premined Decentralized Community 
 * Cryptography: CryptoNote V2.0
-* Proof Type: Pow \(Proof of Work\)
+* Proof Type: EPow \(Egalitarian Proof of Work\)
 * Mining Algorithm: Cryptonight
-* Diffculty Algorithm: Zawy LWMA-3, Adjusted everyblock
+* Difficulty Algorithm: CIMA + CLIF, Adjusted everyblock
 * Blocktime: 120 seconds
 * Tx Hash: Instant
 * Required Confirmations: 10 confirmations
