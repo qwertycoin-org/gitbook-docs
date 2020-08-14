@@ -25,84 +25,95 @@ For example:
 ### `getinfo` - returns information related to the network and daemon connection
 
 * Expected output
-
-{"already\_generated\_coins":"96407158135.65998447",
-
-"alt\_blocks\_count":53,
-
-"block\_major\_version":5,
-
-"block\_minor\_version":0,
-
-"contact":"[dev@qwertycoin.org](mailto:dev@qwertycoin.org)",
-
-"difficulty":91532104667,
-
-"fee\_address":"QWC1RALGaP5U8BLJskYR2YVSjr3DQEEuS5xghbtX2mm134YVXgS4RJHZGkeBvXf4BRFLWkv4zHGJ267S9pjwvVt63xwkdYPCwF,
-
-"grey\_peerlist\_size":2430,
-
-"height":388735,
-
-"incoming\_connections\_count":10,
-
-"last\_block\_difficulty":98871693571,
-
-"last\_block\_reward":16796197998698,
-
-"last\_block\_timestamp":1565818316,
-
-"last\_known\_block\_index":388734,
-
-"min\_tx\_fee":100000000,
-
-"outgoing\_connections\_count":7,
-
-"readable\_tx\_fee":"1.00000000",
-
-"rpc\_connections\_count":17,
-
-"start\_time":1564440874,
-
-"status":"OK",
-
-"top\_block\_hash":"009e355219f2c4647650a7d1f4f8ae81af947964859f983fbeb38e148323ab9d",
-
-"tx\_count":1058803,
-
-"tx\_pool\_size":42,
-
-"version":"5.2.1.3090 \(25ffb5a\)",
-
-"white\_peerlist\_size":998}
+```text
+{
+    "already_generated_coins": "129095443585.49424584",
+    "alt_blocks_count": 72,
+    "block_major_version": 5,
+    "block_minor_version": 0,
+    "contact": "dev@qwertycoin.org",
+    "difficulty": 15525517770,
+    "fee_address": "QWC1RALGaP5U8BLJskYR2YVSjr3DQEEuS5xghbtX2mm134YVXgS4RJHZGkeBvXf4BRFLWkv4zHGJ267S9pjwvVt63xwkdYPCwF",
+    "grey_peerlist_size": 785,
+    "height": 631979,
+    "incoming_connections_count": 196,
+    "last_block_difficulty": 15501045527,
+    "last_block_reward": 10562690450574,
+    "last_block_timestamp": 1595189310,
+    "last_known_block_index": 631978,
+    "min_tx_fee": 100000000,
+    "outgoing_connections_count": 7,
+    "readable_tx_fee": "1.00000000",
+    "rpc_connections_count": 19,
+    "start_time": 1591793327,
+    "status": "OK",
+    "top_block_hash": "ebb71cd6dbbaa2c8079b05ee897b13f22eb48db4b80c0701dddd8f3b1eb2ae95",
+    "tx_count": 1763574,
+    "tx_pool_size": 0,
+    "version": "5.3.1.4068 (f693d25)",
+    "white_peerlist_size": 90
+}
+```
 
 ### `getheight` - returns the height of the daemon and the network
 
 * Expected output
 
-{"height":388736,"status":"OK"}
+```text
+{
+    "height": 631980,
+    "status": "OK"
+}
+```
 
 ### `gettransactions` - returns list of missed transactions
 
 * Expected output
 
-{"missed\_tx":\[\],"status":"OK","txs\_as\_hex":\[\]}
+```text
+{
+    "missed_tx": [],
+    "status": "OK",
+    "txs_as_hex": []
+}
+```
 
 ### `feeaddress` - returns the address to where the nodes fees are sent
 
 * Expected output
 
-{"fee\_address":"QWC1RALGaP5U8BLJskYR2YVSjr3DQEEuS5xghbtX2mm134YVXgS4RJHZGkeBvXf4BRFLWkv4zHGJ267S9pjwvVt63xwkdYPCwF","status":"OK"}
+```text
+{
+    "fee_address": "QWC1RALGaP5U8BLJskYR2YVSjr3DQEEuS5xghbtX2mm134YVXgS4RJHZGkeBvXf4BRFLWkv4zHGJ267S9pjwvVt63xwkdYPCwF",
+    "status": "OK"
+}
+```
 
 ### `getpeers` - returns the list of peers connected to the daemon
 
 * Expected output
 
-{"peers":\["207.180.227.215:8196", "220.82.126.94:8196", "185.177.59.99:8196", "80.211.204.60:8196", "167.86.93.173:8196", ...\],"status":"OK"}
+```text
+{
+    "peers": [
+        "94.130.187.117:8196",
+        "195.201.27.148:8196",
+        "148.251.115.233:8196",
+        "173.212.197.11:8196",
+        ...
+        "173.249.35.250:8196"
+    ],
+    "status": "OK"
+}
+```
 
 ### `paymentid` - returns the paymentid of the node
 
 * Expected output
 
-{"payment\_id":"55c1259bddceff71a370d26e09d6bc88bcc5e0db61ea758e250700792e7cc532"}
+```text
+{
+    "payment_id": "d4d9671bf684c73209d0f756a81ced9493650d16cb332ea477cc3bdf90522db7"
+}
+```
 
