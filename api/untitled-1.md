@@ -25,8 +25,9 @@ For example:
 ### `getinfo` - returns information related to the network and daemon connection
 
 * Expected output
-```text
-{
+
+  ```text
+  {
     "already_generated_coins": "129095443585.49424584",
     "alt_blocks_count": 72,
     "block_major_version": 5,
@@ -52,8 +53,8 @@ For example:
     "tx_pool_size": 0,
     "version": "5.3.1.4068 (f693d25)",
     "white_peerlist_size": 90
-}
-```
+  }
+  ```
 
 ### `getheight` - returns the height of the daemon and the network
 

@@ -1,4 +1,4 @@
-# Install Cmake 3.10
+# Install Cmake 3.14
 
 ### With these lines you can install cmake for Linux in the correct version.
 

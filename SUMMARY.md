@@ -51,7 +51,7 @@
 
 * [Compiling Daemon from Source](developer/compiling-from-source/README.md)
   * [MacOS QT Install](developer/compiling-from-source/macos-qt-install.md)
-  * [Install Cmake 3.10](developer/compiling-from-source/untitled.md)
+  * [Install Cmake 3.14](developer/compiling-from-source/untitled.md)
 * [Forking Qwertycoin](developer/forking-qwertycoin.md)
 * [Google Breakpad Integration](developer/google-breakpad-integration.md)
 * [Hosting Block Explorer](developer/hosting-block-explorer.md)
