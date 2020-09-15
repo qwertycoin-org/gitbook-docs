@@ -4,7 +4,7 @@
 
 #### Prerequisites
 
-* You will need the following packages: build-essential, [cmake \(3.10 or higher\)](https://docs.qwertycoin.org/developer/fixes/Install-Cmake-3.10) and git;
+* You will need the following packages: build-essential, CMake \(3.14 or higher\) and git;
 * Most of these should already be installed on your system. For example on Ubuntu by running:
 
 ```text
