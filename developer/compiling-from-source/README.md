@@ -32,7 +32,7 @@ cmake --build . --config Release
 
 * Install [Visual Studio 2017 Community Edition](https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&page=inlineinstall);
 * When installing Visual Studio, it is **required** that you install **Desktop development with C++** and the **VC++ v140 toolchain** when selecting features. The option to install the v140 toolchain can be found by expanding the "Desktop development with C++" node on the right. You will need this for the project to build correctly;
-* Make sure that bundled cmake version is 3.10 or higher.
+* Make sure that bundled CMake \(3.14 or higher\) or higher.
 
 #### Building
 
@@ -56,7 +56,7 @@ cmake --build . --config Release
 #### Prerequisites
 
 * Install Xcode and Developer Tools;
-* Install [cmake](https://cmake.org/). See [here](https://stackoverflow.com/questions/23849962/cmake-installer-for-mac-fails-to-create-usr-bin-symlinks) if you are unable to call `cmake` from the terminal after installing;
+* Install [CMake](https://cmake.org/). See [here](https://stackoverflow.com/questions/23849962/cmake-installer-for-mac-fails-to-create-usr-bin-symlinks) if you are unable to call `cmake` from the terminal after installing;
 * Install git.
 
 #### Building
@@ -78,7 +78,7 @@ cmake --build . --config Release
 
 #### Prerequisites
 
-* You will need the following packages: build-essential, cmake \(3.10 or higher\), git, unzip and wget;
+* You will need the following packages: build-essential, CMake \(3.14 or higher\), git, unzip and wget;
 * Most of these should already be installed on your system. For example on Ubuntu by running:
 
 ```text
@@ -113,7 +113,7 @@ cmake --build . --config Release
 
 #### Prerequisites
 
-* You will need the following packages: cmake \(3.10 or higher\) and git;
+* You will need the following packages: CMake \(3.14 or higher\) and git;
 * Most of these should already be installed on your system. For example on FreeBSD by running:
 
 ```text
