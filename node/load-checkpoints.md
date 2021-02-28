@@ -11,10 +11,12 @@ We have provided an API which automatically creates the most recent block in [ch
 
 ## How to start Daemon with checkpoint.csv
 
-1. [Download a checkpoint.csv from here](https://explorer.qwertycoin.org/q/checkpoint_csv)
+1. [Download a checkpoint.csv from here](https://api.qwertycoin.org/checkpoint_csv)
 2. Save this checkpoint.csv in the folder with your qwertycoind.exe
 3. Open a CMD or a Terminal and launch your Daemon with the following command:  `qwertycoind --load-checkpoints checkpoint.csv`
 4. Your Daemon launch and you will see a message like this:  `Loading checkpoints from file...`  `Loaded 1 checkpoint from checkpoint.csv`
 5. Your daemon will now sync without an error to the checkpoint height. If the error occurs again, repeat steps 1 to 5 with new checkpoint.
 6. Done
+
+
 
