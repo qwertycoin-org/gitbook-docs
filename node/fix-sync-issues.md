@@ -13,5 +13,9 @@ You can start the Qwertycoin Daemon with a Checkpoint using `--load-checkpoints 
 
 Download a checkpoint from [here](https://explorer.qwertycoin.org/q/checkpoint_csv) and start your Daemon with `--load-checkpoints checkpoint.csv` command. Please read our article about starting the daemon with checkpoints from CSV:
 
-[Start Daemon with additional Checkpoint](https://docs.qwertycoin.org/guides/daemon/daemon/Load-Checkpoints)
+[Start Daemon with additional Checkpoint](https://docs.qwertycoin.org/node/load-checkpoints)
+
+
+
+
 
