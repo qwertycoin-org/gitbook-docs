@@ -7,7 +7,7 @@ A checkpoint is the combination of block height and the associated block hash. Y
 Under `Recent blocks` you will find the Blocks and the corresponding Hashes. This is an example Checkpoint:  
  `269588,dd0e5f6232fde383e8249dfefb3d1d8e60834cac0edeeb26ce3179ee7fbbe7c6`
 
-We have provided an API which automatically creates the most recent block in [checkpoint format](https://explorer.qwertycoin.org/q/checkpoint_raw). You can choose between a [single line](https://explorer.qwertycoin.org/q/checkpoint_raw/) that you can use to create the CSV yourself, or you can [download a CSV file](https://explorer.qwertycoin.org/q/checkpoint_csv) – checkpoint \(CSV Export\).
+We have provided an API which automatically creates the most recent block in [checkpoint format](https://api.qwertycoin.org/checkpoint_raw). You can choose between a [single line](https://explorer.qwertycoin.org/q/checkpoint_raw/) that you can use to create the CSV yourself, or you can [download a CSV file](https://explorer.qwertycoin.org/q/checkpoint_csv) – checkpoint \(CSV Export\).
 
 ## How to start Daemon with checkpoint.csv
 
