@@ -1,14 +1,7 @@
-# Install Cmake 3.14
+# Historical page: Historical CMake installation
 
-### With these lines you can install cmake for Linux in the correct version.
+> **Compatibility notice:** This URL is retained so old links do not silently present obsolete Qwertycoin operations.
 
-```text
-wget https://github.com/Kitware/CMake/releases/download/v3.14.0-rc2/cmake-3.14.0-rc2-Linux-x86_64.tar.gz
-tar -xvf cmake-3.14.0-rc2-Linux-x86_64.tar.gz
-cd cmake-3.14.0-rc2-Linux-x86_64
-sudo cp -r bin /usr/
-sudo cp -r share /usr/  
-sudo cp -r doc /usr/share/  
-sudo cp -r man /usr/share/
-```
+Use the [current replacement](README.md).
 
+The original content remains recoverable from Git commit `151a593c09f7443f67bae982b10e1447e19797ca`.

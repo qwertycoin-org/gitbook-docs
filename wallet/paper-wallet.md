@@ -1,18 +1,7 @@
-# Paper Wallet
+# Historical page: Paper wallet
 
-The main purpose of a paper wallet is to quickly create a wallet address to start receiving funds. But you won't be able to spend or send your funds until you setup a CLI, GUI or Web Wallet.
+> **Compatibility notice:** This URL is retained so old links do not silently present obsolete Qwertycoin operations.
 
-## Generate a Wallet Address
+Use the [current replacement](../legacy/retired-features.md).
 
-* Go [here](https://explorer.qwertycoin.org/#paperwallet) to go to the paper wallet generator. You will see something like this:
-* To generate the wallet, click the 'Generate' button at the top of the page. A new wallet will be generated for you.
-* Once generated you will be given your Qwertycoin wallet address, mnemonic seed, legacy GUI keys, view keys and spend keys.
-
-![Screenshot of Paper Wallet Generator](../.gitbook/assets/paper-wallet-example.png)
-
-_**Make sure to copy all this information down and keep it in a safe place!**_
-
-_**Do not share your mnemonic seed and keys with anyone!**_ If you do they will have access to your funds.
-
-You can safely give out your wallet address to receive funds.
-
+The original content remains recoverable from Git commit `151a593c09f7443f67bae982b10e1447e19797ca`.

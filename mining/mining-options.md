@@ -1,58 +1,21 @@
-# Mining Options
+# RandomX mining
 
-Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Qwertycoin network. By doing this, you will be rewarded with some Qwertycoin.
+> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
 
-If you want to learn about cryptocurrencies, mining is a great place to start!
+> **Verified:** Core `v2.0.2`, official pool profile, XMRig `v6.26.0`, 2026-09-29.
 
-## How to Mine Qwertycoin?
+RandomX proof of work produces Qwertycoin blocks and secures chain selection. EPoSE is a separate service-reward mechanism and never substitutes for PoW.
 
-**Please note**: Unfortunately because of some bad people using mining software in malware, most antivirus software will detect the programs below as unsafe.
+Current miner settings:
 
-It is **likely** you will need to add exceptions and exclusions to your antivirus software in order to make things work properly.
+- algorithm: `rx/0` (RandomX);
+- address: a current mainnet QWC primary address;
+- pool protocol: standard CryptoNote Stratum where offered;
+- amount precision: 8 decimals.
 
-Unless you know what you are doing, please **only** download from the links below.
+Historical CryptoNight, XMR-Stak, mobile/SBC and cloud-mining instructions are retired. They are not current QWC recipes.
 
-There are currently a few different ways in which you can start mining Qwertycoin:
+RandomX benefits from large memory pages, sufficient RAM and CPU cache. Enable huge pages through the operating system's documented mechanism and verify XMRig reports them; do not run downloaded miners as root merely to bypass permissions. Obtain XMRig from its [official release repository](https://github.com/xmrig/xmrig/releases/tag/v6.26.0), verify its published artifact checks, and review antivirus detections rather than disabling protections globally.
 
-## 1. [XMR-Stak](https://github.com/fireice-uk/xmr-stak)
-
-XMR-Stak is a unified miner, which means the same program will be used to mine with both your CPU and your GPU. It will automatically detect your hardware and adjust the settings accordingly.
-
-Please follow [this guide](xmr-stak.md) to start mining Qwertycoin with XMR-Stak.
-
-If you're on Linux, check [this guide](xmr-stak-linux.md).
-
-## 2. [XMRig](https://github.com/xmrig/xmrig)
-
-XMRig is a little bit different to XMR-Stak, you need to download a CPU and GPU miner separately and run two separate instances in your computer. One will use your CPU and the other one will use your GPU.
-
-Please follow [this guide](xmrig.md) to start mining Qwertycoin with XMRig.
-
-## 3. Cloud Mining
-
-Please follow [this guide](cloud-mining.md) to mine with the cloud.
-
-## 4. SBC/Raspberry PI Mining
-
-Please follow [this guide](https://docs.qwertycoin.org/guides/mining/Mining-with-SBC) to mine with a SBC/Rasperry Pi.
-
-## 5. Mobile Mining
-
-**Please note**: Using your mobile to mine Qwertycoin is not effective and should only be done for the lulz. It may also cause the phone to overheat and result in premature silicon degradation, shortening the lifespan of your phone.
-
-Please follow [this guide](mobile-mining.md) to mine with your mobile phone.
-
-## 6. Mine with your Daemon
-
-You can do Solo mining with your Qwertycoind.exe \(CLI-Download\).
-
-1. Open your Qwertycoind.exe
-2. Wait for 100% synchronize
-3. Type `start_mining <address> <threads>` \(`start_mining QWC1N7egU2BQQ1dLHQZfjd5JvmGNd4LiT9wX66QL4ZNTNZkNMTxr54C3wrJK81Ho2RjodprfHhGE6ckKLCkLx4hV9FR8YoRxzh 8`
-
-## Pools
-
-You may view a comprehensive list of pools [here](https://explorer.qwertycoin.org/#pools). Have Questions or Need Help?
-
-Check out our [Discord](https://qwertycoin.org/discord) or [subreddit](https://www.reddit.com/r/QWERTYCOIN/) to get in touch.
+Choose [Solo Mining](solo-mining.md) for direct variance or [Pool Mining](pool-mining.md) for share-based payouts. Mining never guarantees profit; account for electricity, hardware wear, fees and network difficulty.
 

@@ -1,32 +1,28 @@
-# Wallet Backup
+# Backup and restore
 
-## 5 things to remember when backing up your wallet
+> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
 
-1. Keep the wallet file
-2. Keep a record of wallet address
-3. Keep a record of private key\(or Spend Key\) - Must
-4. Keep a record of view Key
-5. Keep a record of mnemonic seeds - Must
+## Back up separately
 
-## Backup your Wallet using CLI Wallet
+| Data | Reconstructable? | Backup guidance |
+| --- | --- | --- |
+| Wallet mnemonic seed / spend keys | No | Offline, redundant, access-controlled |
+| Wallet file | Not safely without seed/keys | Back up encrypted file and verify password |
+| Wallet cache | Yes, by rescan | Optional convenience backup |
+| Blockchain data | Yes, by resync | Optional; large and replaceable |
+| EPoSE keystore | No without creating a new identity | Separate protected backup; never store with public configs |
 
-coming soon
+## Restore a wallet
 
-## Backup your Wallet using GUI Wallet
+1. Install a verified current release.
+2. Restore from seed or supported private keys.
+3. Select current mainnet.
+4. Set a restore height at or before the first expected transaction.
+5. Let the wallet scan to the current daemon height.
+6. Verify receive address, history, unlocked balance, and a small test transaction.
 
-1. Open Your wallet
-2. Go to **Wallet** -&gt; **Export private key**
-3. Save your **Private keys** \(You need this for recovery your Wallet via GUI Wallet\) and the **Spend Secret Key** and the **View Secret Key** \(You need this for recovery your Wallet with CLI Wallet\).
+Restoring old Qwertycoin key material does not restore balances from the legacy chain.
 
-![](https://cdn.qwertycoin.org/images/other/github/export_privatekeys.PNG)
+## File permissions
 
-## You can also backup your Wallet with SEED
-
-**Note**: GUI Seed is only valid for GUI Wallet! GUI Wallet Seed and Paper wallet Seeds are different.
-
-1. Open Your wallet
-2. Go to **Wallet** -&gt; **Show mnemonic seed**
-3. Save your seed
-
-![](https://cdn.qwertycoin.org/images/other/github/export_seed.PNG)
-
+Wallet and backup files should be readable only by the owning account. Do not solve permission errors with world-readable modes. Never delete an EPoSE keystore as a permissions workaround; see [EPoSE Configuration and Identity](../epose/configuration-and-identity.md).

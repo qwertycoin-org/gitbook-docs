@@ -1,24 +1,15 @@
-# Wallet Update
+# Wallet and node updates
 
-If you see a message when open your Wallet?
+> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
 
-![](https://cdn.qwertycoin.org/images/other/github/updateinform.jpg)
+1. Read release notes and verify network/data-format compatibility.
+2. Download from the official release and verify `SHA256SUMS`.
+3. Stop wallet and daemon cleanly.
+4. Back up wallet seed/files and EPoSE identity separately.
+5. Replace binaries or recreate containers without deleting persistent data.
+6. Start the daemon, verify version/height/peers, then open the wallet.
+7. For EPoSE, verify the same identity/service public keys and endpoint after restart.
 
-Or read a message that a new wallet is available you can follow [this guide](https://docs.qwertycoin.org/guides/wallets/Wallet-Backup) so safely update.
+An image pull does not update a running container. Recreate it explicitly. Roll back only if the older binary supports current on-disk formats and consensus state.
 
-## First Backup your Wallet
-
-This step is not mandatory but recommended \(for worst case scenario\). You can copy your wallet file and move it to a second folder \(maybe on a USB Stick or other\). Please follow [this guide](https://docs.qwertycoin.org/guides/wallets/Wallet-Backup) for backup your Wallet using CLI-Wallet or GUI Wallet
-
-## Update Wallet Software
-
-1. Go to [qwertycoin.org](https://qwertycoin.org/wallet/)
-2. Download your new GUI or CLI Wallet
-3. Unzip it
-
-Optional:
-
-## Recovery your Wallet
-
-Please follow [this guide](https://docs.qwertycoin.org/guides/wallets/Wallet-Recovery)
-
+Never overwrite or remove wallet files, EPoSE identity volumes, or seeds as part of a routine update.

@@ -1,22 +1,7 @@
-# Resources
+# Historical page: Historical developer resources
 
-### Qwertycoin Core RPC APIs:
+> **Compatibility notice:** This URL is retained so old links do not silently present obsolete Qwertycoin operations.
 
-* [Qwertycoind](https://docs.qwertycoin.org/developer/api/Daemon-JSON-RPC-API) - Blockchain daemon
-* [Walletd](https://docs.qwertycoin.org/developer/api/Wallet-RPC-API) - Recommended RPC API to use for new projects
+Use the [current replacement](../contributing/contributing.md).
 
-### Reads
-
-* [Qwertycoin Blog](https://www.qwertycoin.org/blog/)
-
-More coming soon...
-
-_Last updated on 2019-9-27_
-
-[← Local Testnet](https://docs.qwertycoin.org/developer/Local-Testnet)[Daemon HTTP RPC Commands →](https://docs.qwertycoin.org/developer/api/Daemon-HTTP-RPC-API)
-
-* [Qwertycoin Core RPC APIs:]()
-* [Reads]()
-
-
-
+The original content remains recoverable from Git commit `151a593c09f7443f67bae982b10e1447e19797ca`.
