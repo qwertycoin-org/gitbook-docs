@@ -1,11 +1,15 @@
 # Validation report
 
-> **Status:** The current-Core GitBook tree and GitBook revision preview are fully validated on `docs/current-core-overhaul`. The production content merge and public custom-domain verification remain pending and are deliberately not reported as passed.
+> **Status:** Complete. The current-Core documentation, GitBook revision preview, production merge, and public custom domain are validated.
 
 **Validation time:** 2026-09-30 05:22 UTC  
 **Environment:** Linux x86_64, Python 3.11.2, Pandoc 2.17.1.1, Git 2.39.5  
 **GitBook baseline:** `151a593c09f7443f67bae982b10e1447e19797ca`, tree `bed2eb3cdd497a3a670bd833f66da78465502964`  
 **Overhaul base:** root-mapping commit `113c65eb8d45056caaf94d17532e80b261250c74`
+
+- **Publication time:** 2026-09-30 06:15 UTC
+- **Published merge:** [PR #3](https://github.com/qwertycoin-org/gitbook-docs/pull/3), `9318e1e340706f63b3a0ae9dc062c1a85da8e6de` on `master`
+- **GitBook production revision:** `02wWARNyaYmkQvIWxgCC`
 
 ## Matrix
 
@@ -18,11 +22,13 @@
 | RPC inventory | Pass | Re-extraction is byte-identical: 203 development registrations (107 daemon, 96 wallet) and 201 release registrations |
 | Internal links, anchors, structure, stale scan | Pass | `tools/validate_docs.py`: 89 pages, exactly one H1 each, balanced fences, complete `SUMMARY.md`, valid local targets/anchors, evidence headers, config and legacy-command gates |
 | Rendering | Pass | Pandoc rendered 89/89 pages as standalone HTML; warnings only supplied filename-derived HTML titles because the smoke command did not pass metadata titles |
-| External links | Pass | 448 unique links: 376 immutable Core source links checked locally against pinned trees; 72 remaining HTTPS links returned 2xx/3xx |
+| External links | Pass | 449 unique links: 376 immutable Core source links checked locally against pinned trees; 73 remaining HTTPS links returned 2xx/3xx |
 | Python helpers | Pass | All five `tools/*.py` files compile with Python 3.11.2; generated cache files are ignored |
 | GitBook connector | Pass | GitBook reported both `GitBook (./)` and `GitBook (./) - docs.qwertycoin.org/` successful for PR head `7ad9437…` and revision `sR0DZDqPesn5bmuynDKl` |
 | GitBook revision preview | Pass | Preview sitemap contains 88 published pages (`SUMMARY.md` is navigation only); 88/88 returned HTTP 200. Home, EPoSE, RPC inventory, validation report, and legacy compatibility markers were checked directly |
-| Current content publication | Pending | Requires explicit merge authorization and independent checks against the non-revision `https://docs.qwertycoin.org/` routes |
+| Current content publication | Pass | Both GitBook production statuses passed for merge `9318e1e…`; the custom domain serves the new home, EPoSE, RPC inventory, validation report, and compatibility pages |
+| Production sitemap | Pass | `https://docs.qwertycoin.org/sitemap-pages.xml` contains 88 unique non-preview URLs; 88/88 returned HTTP 200 with no revision URL leaked into the production sitemap |
+| Legacy public paths | Pass | Representative old paths redirect to explicit retirement pages; the production home contains current RandomX/EPoSE content and no CryptoNight or Karbowanec/Bytecoin runtime claim |
 
 ## Reproducible commands
 
@@ -49,6 +55,5 @@ The RPC gate additionally compares both generated files byte-for-byte with `rpc-
 
 ## Explicit validation limits
 
-- GitBook preview success is not production publication. The public site remains on the 2021 tree until the reviewed content is merged and GitBook publishes the new `master` revision.
 - Platform execution and release-evidence limitations from the [validated Wiki report](https://github.com/qwertycoin-org/qwertycoin/wiki/Validation-Report) remain applicable unless rerun here.
 - No production node, wallet, EPoSE identity, consensus parameter, RPC behavior, or DNS record is changed by this documentation migration.
