@@ -1,6 +1,6 @@
 # Validation report
 
-> **Status:** The current-Core GitBook tree is fully validated on `docs/current-core-overhaul`. Merge, Git Sync, and public-site verification remain pending and are deliberately not reported as passed.
+> **Status:** The current-Core GitBook tree is fully validated on `docs/current-core-overhaul`. The root mapping is merged; connector synchronization, content merge, and public-site verification remain pending and are deliberately not reported as passed.
 
 **Validation time:** 2026-09-30 05:22 UTC  
 **Environment:** Linux x86_64, Python 3.11.2, Pandoc 2.17.1.1, Git 2.39.5  
@@ -12,7 +12,7 @@
 | Gate | Result | Evidence / limitation |
 | --- | --- | --- |
 | GitBook baseline | Pass | Repository `151a593c09f7443f67bae982b10e1447e19797ca`, tree `bed2eb3cdd497a3a670bd833f66da78465502964`, 60 files |
-| Root site mapping | Pending merge/sync | [PR #2](https://github.com/qwertycoin-org/gitbook-docs/pull/2) maps one default space (`space-1`) to `./`; operator selection remains GitHub → GitBook |
+| Root site mapping | Pass | [PR #2](https://github.com/qwertycoin-org/gitbook-docs/pull/2) merged as `5ebb540685694c61413790098c65f4459573b809`; the only baseline change is one default space (`space-1`) mapped to `./` |
 | Content migration | Pass | All 60 baseline files have `Complete` rows: 45 Markdown pages and 15 retained, unreferenced historical media assets |
 | Current technical content | Pass | 89 Markdown pages adapted from validated Wiki commit `b4e1f81…`; 28 stale operational URLs are explicit compatibility notices |
 | RPC inventory | Pass | Re-extraction is byte-identical: 203 development registrations (107 daemon, 96 wallet) and 201 release registrations |
@@ -20,7 +20,8 @@
 | Rendering | Pass | Pandoc rendered 89/89 pages as standalone HTML; warnings only supplied filename-derived HTML titles because the smoke command did not pass metadata titles |
 | External links | Pass | 448 unique links: 376 immutable Core source links checked locally against pinned trees; 72 remaining HTTPS links returned 2xx/3xx |
 | Python helpers | Pass | All five `tools/*.py` files compile with Python 3.11.2; generated cache files are ignored |
-| GitBook sync/publication | Pending | Requires reviewed merge and connector synchronization |
+| GitBook connector | Pending operator confirmation | Public homepage and site index remain reachable but contain the unchanged 2021 tree; GitBook must report the `master`/`./` connector synchronized with initial direction GitHub → GitBook |
+| Current content publication | Pending | Requires reviewed merge of the overhaul and independent homepage, sitemap, new-page, and compatibility-page checks |
 
 ## Reproducible commands
 
@@ -47,6 +48,6 @@ The RPC gate additionally compares both generated files byte-for-byte with `rpc-
 
 ## Explicit validation limits
 
-- GitBook synchronization and public publication are not complete until the repository-root configuration is merged and the connector reports synchronized.
+- GitBook synchronization is not complete until the connector reports synchronized. Public publication is a separate gate and requires the reviewed content merge plus independent site checks.
 - Platform execution and release-evidence limitations from the [validated Wiki report](https://github.com/qwertycoin-org/qwertycoin/wiki/Validation-Report) remain applicable unless rerun here.
 - No production node, wallet, EPoSE identity, consensus parameter, RPC behavior, or DNS record is changed by this documentation migration.
