@@ -1,21 +1,16 @@
-# Fix Sync Issues
+# Synchronization troubleshooting
 
-* **Your Daemon stuck?**
-* **Your GUI Wallet stuck?**
-* **You see errors like these:**  - One of outputs for one of inputs have wrong tx.unlockTime = 269549  - Failed to handle\_output for output no = 3, with absolute offset 103181  - Failed to get output keys for tx with amount = 0.01000000 and count indexes 4  - Failed to check ring signature for tx ace343256581b8e130\[..\]f109de8de
-* **Your Node is not sync with** [**network height**](https://api.qwertycoin.org/height/)**?**
+> **Verified against:** Core `v2.0.2`, Qwertycoin mainnet, 2026-09-29.
 
-## How to Fix Sync Issue
+Diagnose before changing data:
 
-The simplest way is to add an additional checkpoint to your Qwertycoin Daemon. If you're a Node- or a Pool owner you can copy a Checkpoint from here and paste it in a new line in your [CryptoNoteCheckpoints.h](https://github.com/qwertycoin-org/qwertycoin/blob/master/lib/Global/Checkpoints.h) under /qwertycoind/global/ folder. After saving the file you must build your project again.
+1. Check `qwertycoind --version` and the configured network.
+2. Compare local height with multiple healthy peers/explorer observations.
+3. Check incoming/outgoing peer counts and the system clock.
+4. Check disk, filesystem errors, memory pressure and OOM events.
+5. Check firewall/NAT reachability for P2P `8196`.
+6. Read logs around the first error, not only later retries.
 
-You can start the Qwertycoin Daemon with a Checkpoint using `--load-checkpoints arg` Command. If you have a stuck GUI Wallet you have to quit it first and download the CLI client to continue. You can [download the CLI here](https://github.com/qwertycoin-org/qwertycoin/releases).
+Common causes are a legacy data directory, blocked seed/peer connectivity, insufficient disk, an uncleanly copied LMDB, wrong permissions or a clock far from network time.
 
-Download a checkpoint from [here](https://explorer.qwertycoin.org/q/checkpoint_csv) and start your Daemon with `--load-checkpoints checkpoint.csv` command. Please read our article about starting the daemon with checkpoints from CSV:
-
-[Start Daemon with additional Checkpoint](https://docs.qwertycoin.org/node/load-checkpoints)
-
-
-
-
-
+Do not delete wallet files, seeds or EPoSe keystores. Do not import historical CSV checkpoints to suppress a symptom. A normal full resynchronization replaces only blockchain data. EPoSe additionally requires endpoint, identity and lifecycle checks.

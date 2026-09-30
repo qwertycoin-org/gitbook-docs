@@ -1,53 +1,41 @@
-# Simple Steps
+# Getting started
 
-To improve your understanding, please make yourself familiar with blockchain [terminology](terminology.md). Below is essentially a checklist of tasks you have to do to get started with Qwertycoin.
+> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
 
-## Wallet Address and Critical Information
+> **Published-release track:** Core and GUI `v2.0.2`. Verified 2026-09-29 UTC.
 
-A user must generate a wallet address in order to use QWC blockchain from available QWC wallets. There are various types of wallets you can choose including [Paper wallet](https://paper-wallet.md/), [CLI wallet](../wallet/cli-wallet.md), [GUI wallet](../wallet/gui-wallet.md), [Web wallet](../wallet/web-wallet.md) and [Mobile wallet](../wallet/mobile-wallet.md).  
-  
-Make sure to keep a record of the following information before using the blockchain.  
-1. Private Key \(Critical\)  
-2. Mnemonic Seeds \(Critical\)  
-3. Wallet Address  
-4. Wallet File \(Not provided by Paper Wallet\)  
-  
-The information marked \(Critical\) shall not be shared with anyone but yourself. If you lost both critical information and wallet file, you are not able to gain access to your funds stored in respective wallet address.   
-  
-**At all times, do not private key or mnemonic seeds with anyone.**
+## 1. Choose a wallet
 
-## Setting Up a New Wallet Address
+- **Desktop GUI:** easiest full wallet; downloads and verifies chain data through a local or selected daemon. See [Desktop GUI Wallet](../wallet/gui-wallet.md).
+- **CLI wallet:** operator/developer interface included in the Core archive. See [CLI Wallet](../wallet/cli-wallet.md).
+- **Web Wallet:** current browser client at <https://wallet.qwertycoin.org/>. See [Web Wallet](../wallet/web-wallet.md) for its trust and backup model.
+- **Wallet RPC:** integration service, not a consumer wallet. Keep it private and authenticated. See [Wallet RPC Setup](../api/wallet-rpc-setup.md).
 
-You can generate a wallet address from wallets. 
+There is no supported paper-wallet generator, Zero wallet, or current native mobile-wallet release in this documentation.
 
-To view a list of them, their interface and a brief description, as a well as guides on how to use them, you can check [this guide](../wallet/types-of-wallet.md).
+## 2. Download and verify
 
-## Start Mining Qwertycoin
+Download only from the official [Core](https://github.com/qwertycoin-org/qwertycoin/releases/tag/v2.0.2) or [GUI](https://github.com/qwertycoin-org/qwertycoin-gui/releases/tag/v2.0.2) release. Verify the archive against the release `SHA256SUMS` file before extracting it. Checksums detect corruption or substitution relative to that file; they are not publisher signatures.
 
-Mining is essentially the process of using your computer to help verify and secure a cryptocurrency network, in our case, it is the Qwertycoin network. By doing this, you will be rewarded with Qwertycoin.
+See [Downloads and Verification](downloads-and-verification.md).
 
-If you want to learn about crypt-currencies, mining is a great place to start!
+## 3. Create and protect the wallet
 
-To view an in-depth guide on how to mine Qwertycoin, you can view [this guide](../mining/mining-options.md)
+1. Create a new wallet in GUI or `qwertycoin-wallet-cli`.
+2. Record the mnemonic seed offline. Never paste it into a website, support chat, issue, or log.
+3. Use a strong wallet password; it encrypts the wallet file but cannot repair a lost seed.
+4. Record an appropriate restore height near the creation block/date.
+5. Receive a small test amount and verify the address before using larger amounts.
 
-## Start Trading Qwertycoin
+Primary addresses normally begin `QWC…`; current mainnet subaddresses use a different encoded prefix and commonly begin `Qqb…`. Validate addresses with current software rather than checking only visible characters.
 
-Qwertycoin coin is currently available for trading on exchanges with several different trading pairs.
+## 4. Wait for synchronization and unlock
 
-You can learn how to trade Qwertycoin [here](../trading/exchanges.md).
+A wallet can show an incoming transaction before it is confirmed or spendable. The daemon and wallet heights must catch up. Coinbase/mining/service-reward outputs use the compiled Coinbase maturity rule; normal transfers use their transaction unlock rules.
 
-## Track the Price of Qwertycoin
+## 5. Next steps
 
-You can track the price of Qwertycoin across a number of cryptocurrency listing websites. Some of those top listings are:
-
-* [CoinMarketCap](https://coinmarketcap.com/currencies/qwertycoin/)
-* [CoinGecko](https://www.coingecko.com/en/coins/qwertycoin)
-* [Coinranking](https://coinranking.com/coin/qwertycoin-qwc)
-* [Coinlib](https://coinlib.io/coin/QWC/Qwertycoin)
-
-## Socialize!
-
-We have an awesome [community](https://docs.qwertycoin.org/about/Community) and would love for you to join in!
-
-You can join our [Discord](https://qwertycoin.org/discord) or come on over to our [subreddit](https://www.reddit.com/r/QWERTYCOIN/)! We can't wait to see you :\)
-
+- [Backup and Restore](../wallet/wallet-backup.md)
+- [Updates](../wallet/wallet-update.md)
+- [Run a Full Node](../node/run-a-full-node.md)
+- [Privacy Model](../project/privacy-model.md)

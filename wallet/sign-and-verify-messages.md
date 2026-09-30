@@ -1,38 +1,19 @@
-# Sign and Verify Messages
+# Message signing
 
-You can sign a message using the CLI sign\_message command like this
+> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
 
-`sign_message <"Your Message">`
+Message signing proves control of a wallet key for a particular message; it is not a transaction and does not reveal a spend key. It does not prove a legal identity unless the address-to-person binding was established separately.
 
-The signature will then be printed to the screen. You may then provide this signature to someone else to verify. The command to verify is:
+## Wallet RPC
 
-`verify_message <"Your Message"> <address> <signature>`
+The current wallet RPC exposes `sign` and `verify` through `/json_rpc`. Keep RPC authenticated and private.
 
-### Try it yourself
+Illustrative request:
 
-You may reproduce those steps and make sure you get the same results: Create a wallet using the seed
+```json
+{"jsonrpc":"2.0","id":"sign-1","method":"sign","params":{"data":"release statement"}}
+```
 
-> dodge ouch present sake aquarium mystery woken cell aztec duplex inundate vogue vinegar afloat rumble aphid siren sowed junk otter potato argue banjo bays duplex
+Verification requires the message, address, and returned signature. Inspect the exact request fields for the pinned release in [Wallet RPC Reference](../api/wallet-rpc-reference.md).
 
-**\(do not use this seed for anything else except this test\)**
-
-Open this wallet and type `sign_message "My Message"`
-
-> SigV1fYJ8t1rf4UkNATJFK7fxmJAcg9GCBGG9dXrr7bs4KZNBjnFgNJ33256MFRX7AG2q1Kdi8XQDruMkZbiNwXwAsLb9
-
-This is your signature. Then verify the signature:
-
-`verify_message "My Message" QWC1LxPvCVibmBUAaJu1hm8xk35UjJqYvTA4AisTSerheZ53Yse3SwAg8U7WkPcDAxZH1QpqDVxBcKvDUmMUuRJuAEZa9HzZm9 SigV1fYJ8t1rf4UkNATJFK7fxmJAcg9GCBGG9dXrr7bs4KZNBjnFgNJ33256MFRX7AG2q1Kdi8XQDruMkZbiNwXwAsLb9`
-
-> Valid signature from QWC1LxPvCVibmBUAaJu1hm8xk35UjJqYvTA4AisTSerheZ53Yse3SwAg8U7WkPcDAxZH1QpqDVxBcKvDUmMUuRJuAEZa9HzZm9
-
-If you sign this text yourself you will probably get a different signature than me. This is because the signing is not deterministic. Nevertheless, you should be able to verify my signature without problems.
-
-## Sign & Verify using the GUI Wallet
-
-1. Create a new wallet from the example seed above
-2. Navigate to File &gt; Sign message Write My Message in the the message field at the top.
-3. Copy the generated "Signature" into the verification field \(Verify message\) or navigate to File &gt; "Verify signed message" Copy the message into the verification "message" field. Paste the Qwertycoin address in the "Address" field Your Message will be verified.
-
-![](https://cdn.qwertycoin.org/images/other/signverify.PNG)
-
+The historical `simplewallet` instructions are retired; use current CLI/GUI/RPC features.
