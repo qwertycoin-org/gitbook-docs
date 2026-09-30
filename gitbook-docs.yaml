@@ -1,0 +1,12 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+version: 1
+site:
+  title: Qwertycoin Documentation
+  structure:
+    - type: space
+      key: space-1
+      title: Qwertycoin Documentation
+      path: qwertycoin-documentation
+      default: true
+      content:
+        directory: ./
