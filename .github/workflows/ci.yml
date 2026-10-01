@@ -1,0 +1,47 @@
+name: Required CI
+
+on:
+  pull_request:
+    branches: [master]
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-required-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  docs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout documentation
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          path: docs
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Validate page, navigation, legacy, and RPC contracts
+        working-directory: docs
+        run: python3 tools/validate_docs.py
+      - name: Reject whitespace errors
+        working-directory: docs
+        run: git diff --check
+
+  required:
+    name: required
+    if: always()
+    needs: [docs]
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Require every gate
+        env:
+          DOCS_RESULT: ${{ needs.docs.result }}
+        run: test "$DOCS_RESULT" = success
