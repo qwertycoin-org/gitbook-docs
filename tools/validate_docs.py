@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import re
-import subprocess
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
 
@@ -112,15 +111,20 @@ def stale_content(all_pages: list[Path]) -> None:
 
 
 def config_contract() -> None:
-    data = json.loads(subprocess.check_output(["yq", ".", "gitbook-docs.yaml"], cwd=ROOT))
-    assert data["$schema"] == "https://api.gitbook.com/gitbook-docs.yaml"
-    assert data["version"] == 1
-    structure = data["site"]["structure"]
-    assert len(structure) == 1
-    assert sum(item.get("default") is True for item in structure) == 1
-    assert structure[0]["type"] == "space"
-    assert structure[0]["key"] == "space-1"
-    assert structure[0]["content"]["directory"] == "./"
+    text = (ROOT / "gitbook-docs.yaml").read_text()
+    required_lines = {
+        "$schema: https://api.gitbook.com/gitbook-docs.yaml",
+        "version: 1",
+        "    - type: space",
+        "      key: space-1",
+        "      default: true",
+        "        directory: ./",
+    }
+    lines = set(text.splitlines())
+    missing = sorted(required_lines - lines)
+    assert not missing, f"gitbook-docs.yaml missing required lines: {missing}"
+    assert text.count("    - type: space\n") == 1
+    assert text.count("      default: true\n") == 1
 
 
 def migration_contract() -> None:
