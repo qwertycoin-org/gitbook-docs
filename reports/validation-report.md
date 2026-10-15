@@ -1,6 +1,6 @@
 # Validation report
 
-> **Status:** The latest-first update is locally validated. GitBook pull-request preview and public publication remain pending review/merge. The previous production publication record is retained below.
+> **Status:** The latest-first update is locally validated and rendered in the GitBook pull-request preview. Public publication remains pending review/merge. The previous production publication record is retained below.
 
 ## Latest-first validation (2026-10-15)
 
@@ -18,7 +18,8 @@
 | External links | Pass | 449 unique links: 376 immutable Core source links checked against the exact trees and 73 network links returned 2xx/3xx |
 | Python helpers | Pass | All `tools/*.py` files compile; RPC generation is reproducible |
 | Git diff | Pass | `git diff --check` reports no whitespace errors after the documented changes |
-| GitBook preview/publication | Pending | Requires the review PR and must not be inferred from local Markdown rendering |
+| GitBook preview | Pass | [PR #6](https://github.com/qwertycoin-org/gitbook-docs/pull/6) revision `EZbmdVnKVKXr6QLsloWI`: both GitBook statuses pass, representative current pages return HTTP 200, the preview sitemap contains 88 unique revision-bound pages, and generated `llms.txt` has no stale current-release label |
+| Public publication | Pending | Requires reviewed merge to `master`; preview success is not a production-publication claim |
 
 ## Previous publication record (2026-09-30)
 
