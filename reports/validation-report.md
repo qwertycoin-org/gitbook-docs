@@ -18,7 +18,7 @@
 | External links | Pass | 449 unique links: 376 immutable Core source links checked against the exact trees and 73 network links returned 2xx/3xx |
 | Python helpers | Pass | All `tools/*.py` files compile; RPC generation is reproducible |
 | Git diff | Pass | `git diff --check` reports no whitespace errors after the documented changes |
-| GitBook preview | Pass | [PR #6](https://github.com/qwertycoin-org/gitbook-docs/pull/6) revision `EZbmdVnKVKXr6QLsloWI`: both GitBook statuses pass, representative current pages return HTTP 200, the preview sitemap contains 88 unique revision-bound pages, and generated `llms.txt` has no stale current-release label |
+| GitBook preview | Pass | Both GitBook statuses on [PR #6](https://github.com/qwertycoin-org/gitbook-docs/pull/6) pass; representative current pages return HTTP 200, the preview sitemap contains 88 unique revision-bound pages, and generated `llms.txt` has no stale current-release label |
 | Public publication | Pending | Requires reviewed merge to `master`; preview success is not a production-publication claim |
 
 ## Previous publication record (2026-09-30)
