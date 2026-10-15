@@ -1,25 +1,26 @@
 # Source and version matrix
 
-> **Verified:** 2026-09-30 05:22 UTC. Network: Qwertycoin mainnet unless stated otherwise.
+> **Evidence snapshot:** 2026-10-15 UTC. Network: Qwertycoin mainnet unless stated otherwise. Exact versions on this page are review evidence, not installation pins for current user guides.
 
-This page fixes the evidence baseline used for the 2026 GitBook documentation overhaul. Commands and contracts elsewhere in this documentation identify whether they target the published release or development source.
+This page fixes the evidence baseline used to review the latest-first documentation. Current installation and operator guides resolve the latest stable release from each component's official publication channel; they do not copy these versions into normal instructions.
 
 | Component | Published/current revision | Role in this documentation |
 | --- | --- | --- |
-| GitBook repository before overhaul | `151a593c09f7443f67bae982b10e1447e19797ca`, tree `bed2eb3cdd497a3a670bd833f66da78465502964`, on `master` | Recoverable 60-file pre-change snapshot; `docs.qwertycoin.org` still served this stale content before reconnection |
+| GitBook latest-first base | `1d453bcf7f3611ba1ebc3f185782c3e76522ed5d` on `master` | Reviewed base for the latest-first update; the pre-overhaul baseline remains in the migration manifest |
 | Validated GitHub Wiki source | `b4e1f81638a410e13c8a3fff3897d53fc436a424`; technical content commit `46742a250935fa62496ee97d289cd128df210641` | Revision-bound source imported and adapted to GitBook paths; it is not used as a live Git Sync source |
-| Core development source | `a71c0eb2c5b5675f9664fde5738e9cd9ba2e1eac` on `main` | Current source contracts, including EPoSE receipt diagnostics |
-| Core published release | `v2.0.2`, source `54308d8473dc5606d054c0ba428cfb2d64e758c1` | Default installation and operator track |
-| GUI development source | `ecd1844f1b2e3416dec16c07a21e6850e11b630c` on `master` | Current GUI source |
-| GUI published release | `v2.0.2`, source `c5eced2f5c1ae5cba04178a276460ffb2a77f459`, Core submodule `54308d8473dc5606d054c0ba428cfb2d64e758c1` | Default desktop-wallet track |
-| Web Wallet published branch | `05f81c0ce9ecfe11da0f52491bb9e26e724723f6` on `master` | Current released Web Wallet behavior |
-| Web Messenger preview | PR #14, head observed as `37d686d503c916004f684abcaf7cdc240fe69132` | Unreleased; never described as a released Web Wallet feature |
+| Core reviewed development source | `b88bb3781f20e1a0d1427fd6abf41aaac3b8ac5f` on `main` | Development comparison only; not the default installation track |
+| Core latest stable release at snapshot | `v2.0.3`, source `766839bb49475200977f6302b60c01e34d66e253` | Exact release used to validate current Core, EPoSE and RPC instructions |
+| GUI reviewed development source | `5bea119b72d7b0ef68579e95407dbfbe0677da31` on `master` | Development comparison only; equal to the current release source at this snapshot |
+| GUI latest stable release at snapshot | `v2.0.3`, source `5bea119b72d7b0ef68579e95407dbfbe0677da31`, Core submodule `766839bb49475200977f6302b60c01e34d66e253` | Exact release used to validate current desktop-wallet instructions |
+| Docker latest channel at snapshot | `docker.io/qwertycoin/qwertycoin:latest`, `linux/amd64`, digest `sha256:e7120074680685a748d491bede60baef9a716c023b9d3c43efbc6e55f037abc6` | Same digest as the release-specific `2.0.3` tag at verification time; consumers should pin the digest after resolving `latest` |
+| Web Wallet published branch | `7852740e8e301037aedf9cdc58d7c74150c45e90` on `master` | Current deployed browser-wallet behavior; QMS1 Fast Profile is merged, not a Core/GUI release feature |
 
 ## Version policy
 
-- **Published release** instructions work with Core or GUI `v2.0.2` unless a page says otherwise.
-- **Development source** instructions name the exact minimum commit. Development-only methods are marked beside the method.
-- `get_epose_diagnostics` is present at Core `a71c0eb2…` and absent from Core `v2.0.2`; release operators must not expect it.
+- **Current instructions** target the newest official stable release for the named component/channel at the time of use. Core, GUI, Docker and Web Wallet channels are resolved independently.
+- **Evidence snapshots** retain exact releases, commits and digests so a review can be reproduced; they do not freeze normal user instructions to that snapshot.
+- **Development source** behavior is excluded from the regular user path unless a page explicitly labels it and gives an exact minimum commit.
+- `get_epose_diagnostics` is present in both reviewed Core revisions in this snapshot and remains unrestricted/authenticated.
 - Open pull requests and historical source files are not runtime evidence.
 
 ## Authority order

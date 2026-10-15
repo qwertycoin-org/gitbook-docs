@@ -1,8 +1,8 @@
 # EPoSE monitoring and diagnostics
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Release note:** `get_epose_diagnostics` is **not** in `v2.0.2`; it requires development source `a71c0eb2` or later containing that route.
+> **Availability:** `get_epose_diagnostics` is included in the latest stable Core release. It is an authenticated operator method and is rejected on restricted listeners.
 
 Monitor distinct stages separately:
 
@@ -16,9 +16,7 @@ Monitor distinct stages separately:
 | Received | wallet detects Coinbase service output |
 | Spendable | normal Coinbase maturity has elapsed |
 
-On release `v2.0.2`, use local unrestricted `get_info`, `get_epose_info`, endpoint/status/reward methods and structured logs. Do not expose unrestricted RPC.
-
-Development diagnostics require an unrestricted listener **and configured RPC authentication**. A protected netrc avoids credentials in process arguments:
+Use local unrestricted `get_info`, `get_epose_info`, endpoint/status/reward methods and structured logs. Diagnostics require an unrestricted listener **and configured RPC authentication**. Do not expose unrestricted RPC. A protected netrc avoids credentials in process arguments:
 
 ```bash
 curl --digest --netrc-file /secure/path/qwertycoind-rpc.netrc \

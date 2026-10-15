@@ -1,6 +1,6 @@
 # Wallet and node updates
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 1. Read release notes and verify network/data-format compatibility.
 2. Download from the official release and verify `SHA256SUMS`.

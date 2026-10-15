@@ -1,8 +1,6 @@
 # Wallet overview
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
-
-> **Published-release track:** Core/GUI `v2.0.2`.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 | Wallet | Best for | Important boundary |
 | --- | --- | --- |

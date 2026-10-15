@@ -1,8 +1,8 @@
 # Wallet RPC reference
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Route map:** 96 registrations / 92 unique command structures at Core `a71c0eb2`; identical registration count in `v2.0.2`.
+> **Route map:** 96 registrations / 92 unique command structures in the latest stable release and the reviewed development revision.
 
 All methods use JSON-RPC 2.0 at `/json_rpc`. Exact request/response fields, optional defaults, integer types and source permalinks are in [RPC Inventory](rpc-inventory.md). Amounts are atomic units.
 

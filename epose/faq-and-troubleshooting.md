@@ -1,6 +1,6 @@
 # EPoSE FAQ and troubleshooting
 
-> **Verified against:** mainnet profile at Core `a71c0eb2`, 2026-09-29.
+> **Verified against:** the latest stable Core mainnet profile; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 ## Why no reward yet?
 

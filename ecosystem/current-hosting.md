@@ -1,8 +1,8 @@
 # Current Explorer and Web Wallet hosting
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Repositories verified:** Explorer production source and Web Wallet `05f81c0c`, 2026-09-29.
+> **Repositories verified:** current Explorer production source and deployed Web Wallet; exact reviewed revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 ## Explorer
 
@@ -14,7 +14,6 @@ Production requires immutable image/Core revisions, explicit paths/UID/GID/netwo
 
 Use the maintained [Web Wallet repository](https://github.com/qwertycoin-org/wallet.qwertycoin.org). Pin its WebAssembly/worker artifacts and deployment revision, apply its security headers and validate production Explorer compatibility. Browser storage contains wallet authority and must not be treated as a server backup.
 
-The open QMS/Messenger pull request is unreleased at this verification point. Do not advertise it as production functionality until merged, deployed and release-validated.
+The current official Web Wallet includes the password-gated QMS1 Fast Profile. Treat Web Wallet deployment evidence separately from Core and GUI release numbers.
 
 Historical generic web-wallet/explorer hosting recipes are retirement stubs because their dependencies and secret-processing assumptions are incompatible with the current hardened deployments.
-

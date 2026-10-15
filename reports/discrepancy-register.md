@@ -1,5 +1,7 @@
 # Discrepancy register
 
+> **Historical evidence:** this register records the 2026-09 review baseline and intentionally retains exact release versions. Consult current user guides for installation and operation.
+
 > **Verified against:** GitBook baseline `151a593…`, validated GitHub Wiki `b4e1f81…`, Core `a71c0eb2…`, Core release `v2.0.2` (`54308d847…`), Qwertycoin mainnet where applicable, 2026-09-30 UTC.
 
 | Conflict | Resolution |

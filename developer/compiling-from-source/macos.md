@@ -1,8 +1,8 @@
 # Build on macOS
 
-> **Verified against:** [Pinned source and release revisions](../../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../../reports/source-version-matrix.md).
 
-> **Validated recipe source:** Core `v2.0.2` release workflow, macOS 15 arm64. The released package is ad-hoc signed, not Developer ID signed or notarized.
+> **Validated recipe source:** latest stable Core release workflow, macOS 15 arm64. Check the current release notes for signing and notarization status.
 
 ```bash
 xcode-select --install
@@ -21,5 +21,4 @@ cmake -S source -B build/macos -G Ninja \
 cmake --build build/macos --target daemon simplewallet wallet_rpc_server --parallel 2
 ```
 
-Run this after an explicit `v2.0.2` checkout and recursive submodule initialization. Intel macOS is not claimed as release-validated by this track. The historical Qt workaround is retired; use [GUI Build](gui.md) for GUI dependencies.
-
+Run this after the explicit latest stable release-tag checkout and recursive submodule initialization described in [Build Overview](README.md). Intel macOS is not claimed as release-validated by this track. The historical Qt workaround is retired; use [GUI Build](gui.md) for GUI dependencies.

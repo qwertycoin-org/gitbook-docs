@@ -1,9 +1,9 @@
 # EPoSE overview
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 > **Protocol:** HF17 / EPoSE protocol 2, mainnet activation height 0.  
-> **Verified:** Core `v2.0.2` and development `a71c0eb2`, 2026-09-29.
+> **Release track:** latest stable Core release.
 
 EPoSE rewards useful, independently verifiable service. It does **not** replace RandomX proof of work: miners still produce blocks and determine chain selection. It is not staking, and running an ordinary full node alone does not qualify.
 
@@ -26,4 +26,3 @@ The transcript proves that the selected subject served and signed the requested 
 Consensus validates recorded transcripts without DNS lookups, wall-clock checks or live network requests. Endpoint discovery/probing is an operational step performed before a receipt reaches consensus.
 
 Continue with [Service Node Quickstart](service-node-quickstart.md), [Epochs and Qualification](epochs-and-qualification.md), and [Rewards](rewards.md).
-

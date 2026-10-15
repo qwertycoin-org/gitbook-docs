@@ -1,8 +1,8 @@
 # Contributing
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Primary source:** current Core repository contribution and CI policy at `a71c0eb2`.
+> **Primary source:** current repository contribution and CI policies; exact reviewed revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Open issues and pull requests in the repository that owns the contract:
 
@@ -15,5 +15,4 @@ Pin the issue to an exact revision and include reproducible steps, expected/actu
 
 Consensus changes require explicit protocol/security review, focused tests and release gates. RandomX remains responsible for block production and chain selection; EPoSE rewards service and must not silently replace PoW.
 
-This Wiki is its own Git repository. Wiki edits should refresh [Source Version Matrix](../reports/source-version-matrix.md), route inventory where relevant, migration/link/stale-content checks and visible verification headers.
-
+This documentation is maintained in its own Git repository. Changes should refresh the [Source and version matrix](../reports/source-version-matrix.md), route inventory where relevant, migration/link/stale-content checks and visible verification headers.

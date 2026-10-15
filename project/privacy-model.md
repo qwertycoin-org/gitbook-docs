@@ -1,6 +1,6 @@
 # Privacy model
 
-> **Verified against:** current Monero-derived transaction implementation in Core `a71c0eb2…`, Qwertycoin mainnet, 2026-09-29.
+> **Verified against:** the latest stable Core transaction implementation on Qwertycoin mainnet; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Qwertycoin transactions use CryptoNote/Monero-derived mechanisms including one-time addresses, ring signatures, confidential amounts, and stealth address derivation. These mechanisms reduce direct on-chain linkage between sender, recipient, and amount.
 

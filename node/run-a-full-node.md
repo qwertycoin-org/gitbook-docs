@@ -1,15 +1,12 @@
 # Run a full node
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
-
-> **Published-release track:** Core `v2.0.2` (`54308d84`), mainnet.  
-> **Verified:** 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 A full node validates the chain and serves wallets and peers. It does not automatically qualify for EPoSe rewards.
 
 ## Safe first start
 
-Download and verify the package from the [v2.0.2 release](https://github.com/qwertycoin-org/qwertycoin/releases/tag/v2.0.2), then run:
+Download and verify the package from the [Core latest release](https://github.com/qwertycoin-org/qwertycoin/releases/latest), then run:
 
 ```bash
 ./qwertycoind \
@@ -25,4 +22,3 @@ Check status in the daemon console with `status` and `sync_info`. The node is re
 Use `--data-dir PATH` to select persistent blockchain storage. Stop cleanly with the console `exit` command or the service manager's normal stop operation. Do not copy an actively written LMDB directory as a guaranteed consistent backup.
 
 For unattended operation use [Linux Service Operation](linux-service-operation.md) or [Docker](docker.md). For service rewards, continue with [EPoSE Overview](../epose/overview.md).
-

@@ -1,6 +1,6 @@
 # About Qwertycoin
 
-> **Verified against:** Core `a71c0eb2…` and release `v2.0.2`, Qwertycoin mainnet reset profile, 2026-09-29.
+> **Verified against:** the latest stable Core release and reviewed development source; exact revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Qwertycoin is a privacy-focused cryptocurrency network. Current Core is based on the Monero 0.18.x codebase and retains CryptoNote transaction privacy and RandomX proof-of-work, with Qwertycoin-specific network parameters and EPoSE service rewards.
 

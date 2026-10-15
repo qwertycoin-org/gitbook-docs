@@ -1,8 +1,6 @@
 # Upgrade and recovery
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
-
-> **Published-release track:** Core `v2.0.2`.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 1. Record the running binary version, source/digest, arguments, binds and data paths.
 2. Back up wallet material separately from blockchain data and EPoSe identity.
@@ -16,4 +14,3 @@ An EPoSe upgrade must preserve the service keystore. Deleting it creates a new i
 Blockchain data can be resynchronized. Wallet seeds/spend keys and EPoSe identity cannot. If LMDB is damaged, stop the process and resynchronize into a clean directory rather than mixing databases.
 
 The historical CSV-checkpoint guide is retired. Use current synchronization and database tooling, not stale checkpoint files from another chain era.
-

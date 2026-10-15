@@ -1,6 +1,6 @@
 # Pool operator integration
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 > **Current production profile:** [Qwertycoin RandomX pool](https://pool.qwertycoin.org/), verified 2026-09-29. The production deployment repository is not publicly readable; this page documents only behavior verified from the live service and its revision-bound operator evidence.
 

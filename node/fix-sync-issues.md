@@ -1,6 +1,6 @@
 # Synchronization troubleshooting
 
-> **Verified against:** Core `v2.0.2`, Qwertycoin mainnet, 2026-09-29.
+> **Verified against:** the latest stable Core release; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Diagnose before changing data:
 

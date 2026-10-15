@@ -1,6 +1,6 @@
 # EPoSE configuration and identity
 
-> **Verified against:** Core `v2.0.2` and development `a71c0eb2`, Qwertycoin mainnet, 2026-09-29.
+> **Verified against:** the latest stable Core release; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 | Object | Role | Sensitivity/persistence |
 | --- | --- | --- |

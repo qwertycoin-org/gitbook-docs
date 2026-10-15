@@ -4,7 +4,7 @@ description: Current, revision-bound Qwertycoin user, operator, integration, and
 
 # Qwertycoin documentation
 
-> **Verified against:** [Pinned source and release revisions](reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-30.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Source and version matrix](reports/source-version-matrix.md).
 
 Qwertycoin is a privacy-focused proof-of-work network secured by RandomX. EPoSE is a separate service-reward protocol; it does not replace mining or chain selection.
 
@@ -20,10 +20,13 @@ Qwertycoin is a privacy-focused proof-of-work network secured by RandomX. EPoSE 
 | integrate daemon or wallet RPC | [API Overview](api/overview.md) · [Integration Examples](api/integration-examples.md) |
 | build or contribute | [Build Overview](developer/compiling-from-source/README.md) · [Contributing](contributing/contributing.md) |
 
-## Version tracks
+## Release policy
 
-- **Published release:** Core and GUI `v2.0.2`, with release-source commit and artifact limitations recorded beside the affected instructions.
-- **Development source:** Core `a71c0eb2c5b5675f9664fde5738e9cd9ba2e1eac`. Development-only behavior is labeled at the point of use.
+This documentation describes the latest published Qwertycoin release. Install or update to the latest release before following these instructions.
+
+Here, **latest** means the newest official stable release published for the component and distribution channel being used. It does not mean the newest commit on a default branch or an arbitrary prerelease. Core, GUI, Docker and the Web Wallet have separate publication channels and must not be assumed to share a version number or publication time.
+
+Use the official [Core latest release](https://github.com/qwertycoin-org/qwertycoin/releases/latest) and [GUI latest release](https://github.com/qwertycoin-org/qwertycoin-gui/releases/latest) pages for downloads. Exact revisions used for documentation review remain in the [Source and version matrix](reports/source-version-matrix.md); that evidence snapshot is not an instruction to install an older release.
 
 Do not mix legacy-chain wallet files, addresses, mining software, ports, or service-node procedures with the current network. Start with [Legacy Network Compatibility](project/legacy-network-compatibility.md) when migrating from historical Qwertycoin software.
 
@@ -35,4 +38,3 @@ Do not mix legacy-chain wallet files, addresses, mining software, ports, or serv
 - [Validation report](reports/validation-report.md)
 - [Implementation defects](reports/implementation-defects.md)
 - [Documentation maintenance](contributing/documentation-maintenance.md)
-

@@ -1,9 +1,8 @@
 # API overview
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Published release:** Core/wallet RPC `v2.0.2` (`54308d84`).  
-> **Development:** `a71c0eb2`; only `get_epose_diagnostics` differs in the route map at this baseline.
+> **Published release:** latest stable Core and wallet RPC. The exact release and reviewed default-branch route maps are pinned in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Qwertycoin exposes separate interfaces:
 
@@ -16,7 +15,7 @@ Qwertycoin exposes separate interfaces:
 | ZMQ | `qwertycoind` `8199` example | ZMQ protocol | Not HTTP RPC; keep private unless separately engineered |
 | C++ libraries | linked API | native ABI | Not a stable network contract |
 
-The generated [RPC route inventory](rpc-inventory.md) accounts for every registration at both pinned revisions: 107 daemon and 96 wallet registrations on development, versus 105/96 on release. Aliases remain separate rows but share one command schema. Each row links the exact route and request/response definition.
+The generated [RPC route inventory](rpc-inventory.md) accounts for every registration at both pinned revisions: 107 daemon and 96 wallet registrations on the latest stable release and reviewed development source. Aliases remain separate rows but share one command schema. Each row links the exact route and request/response definition.
 
 All money amounts are unsigned integer **atomic units** (`10^8` per QWC) unless a schema explicitly says otherwise. Never use binary floating point for amounts.
 

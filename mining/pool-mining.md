@@ -1,6 +1,6 @@
 # Pool mining
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 > **Live configuration checked:** 2026-09-29 against `pool.qwertycoin.org` and its source repository.
 

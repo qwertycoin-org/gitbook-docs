@@ -1,8 +1,8 @@
 # RandomX mining
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Verified:** Core `v2.0.2`, official pool profile, XMRig `v6.26.0`, 2026-09-29.
+> **Verified:** latest stable Core release, official pool profile and the separately pinned XMRig version below.
 
 RandomX proof of work produces Qwertycoin blocks and secures chain selection. EPoSE is a separate service-reward mechanism and never substitutes for PoW.
 
@@ -18,4 +18,3 @@ Historical CryptoNight, XMR-Stak, mobile/SBC and cloud-mining instructions are r
 RandomX benefits from large memory pages, sufficient RAM and CPU cache. Enable huge pages through the operating system's documented mechanism and verify XMRig reports them; do not run downloaded miners as root merely to bypass permissions. Obtain XMRig from its [official release repository](https://github.com/xmrig/xmrig/releases/tag/v6.26.0), verify its published artifact checks, and review antivirus detections rather than disabling protections globally.
 
 Choose [Solo Mining](solo-mining.md) for direct variance or [Pool Mining](pool-mining.md) for share-based payouts. Mining never guarantees profit; account for electricity, hardware wear, fees and network difficulty.
-

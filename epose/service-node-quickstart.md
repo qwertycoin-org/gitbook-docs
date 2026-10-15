@@ -1,8 +1,8 @@
 # EPoSE service node quickstart
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Published-release track:** Core `v2.0.2`, Linux x86_64 or Docker `linux/amd64`.  
+> **Published-release track:** latest stable Core release, Linux x86_64 or Docker `linux/amd64`.
 > **Network:** current mainnet only.
 
 ## Requirements
@@ -56,4 +56,3 @@ Normal progression is `ready → registered → active → qualified`, subject t
 Use the official image pinned by digest, separate chain and identity volumes, UID/GID `10001`, and the same port policy. The maintained Core deployment contract is under `deploy/mainnet/`; do not commit real reward addresses or private host configuration.
 
 No funded registration transaction, wallet private key, staking deposit, `register_service_node`, or legacy `--service-node*` option belongs in this workflow.
-
