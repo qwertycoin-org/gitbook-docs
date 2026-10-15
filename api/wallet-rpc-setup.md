@@ -1,8 +1,8 @@
 # Wallet RPC setup
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Published-release track:** `qwertycoin-wallet-rpc v2.0.2`, wallet RPC version 1.31.
+> **Published-release track:** `qwertycoin-wallet-rpc` from the latest stable Core release; wallet RPC protocol version 1.31.
 
 Wallet RPC holds authority over the opened wallet. Bind it to loopback/private networking, keep authentication enabled, and serialize access to each wallet.
 

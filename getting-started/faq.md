@@ -1,6 +1,6 @@
 # Frequently asked questions
 
-> **Verified against:** Core `v2.0.2` / development source `a71c0eb2`, mainnet, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 ## Is this the historical Qwertycoin chain?
 
@@ -30,17 +30,17 @@ Admission, frozen membership, service rounds, qualification closure, determinist
 
 For a normal public node, expose P2P `8196`. Keep unrestricted daemon RPC `8197` and ZMQ `8199` private. An EPoSe producer additionally exposes a **restricted daemon RPC** listener, commonly `8198`. A separate wallet RPC may also default to `8198`; on a combined host assign it another loopback-only port, such as `18082`.
 
-## Is `get_epose_diagnostics` available in `v2.0.2`?
+## Is `get_epose_diagnostics` available?
 
-No. It is verified in development source `a71c0eb2` and absent from release source `54308d84` (`v2.0.2`). Release operators must use the release-supported status methods and logs.
+Yes. The latest stable Core release provides it on the unrestricted, authenticated operator RPC listener. Keep integrations defensive: query `get_version`, handle method-not-found for older nodes and never expose unrestricted daemon RPC publicly.
 
 ## Can I restore a wallet without its original restore height?
 
 Yes, but scanning from an earlier height takes longer. A date-derived or conservative height is safer than a height after the first incoming transaction. A seed restores keys, not historical legacy-chain balances.
 
-## Is the Web Wallet Messenger released?
+## Is the Web Wallet Messenger available?
 
-No. QMS/Messenger work is an open pull request as of the verification date and is not part of the published Web Wallet track.
+The current official Web Wallet includes the password-gated QMS1 Fast Profile. The browser application has its own publication channel; a Core or GUI release number does not identify the deployed Web Wallet revision.
 
 ## Where should integration developers start?
 

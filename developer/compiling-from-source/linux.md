@@ -1,10 +1,16 @@
 # Build on Linux
 
-> **Verified against:** [Pinned source and release revisions](../../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../../reports/source-version-matrix.md).
 
-> **Validated recipe source:** Core `v2.0.2` release workflow, Ubuntu 22.04 x86_64, GCC 11.
+> **Validated recipe source:** latest stable Core release workflow, Ubuntu 22.04 x86_64, GCC 11.
 
 ```bash
+read -r -p "Latest stable Core release tag: " QWC_RELEASE_TAG
+[[ "$QWC_RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+  echo "invalid stable release tag" >&2
+  exit 1
+}
+
 sudo apt-get update
 sudo apt-get install -y build-essential cmake ninja-build pkg-config git ccache python3 curl file patchelf binutils zip \
   libboost-all-dev libssl-dev libzmq3-dev libpgm-dev libunbound-dev libsodium-dev \
@@ -12,7 +18,7 @@ sudo apt-get install -y build-essential cmake ninja-build pkg-config git ccache 
   libgcrypt20-dev libgpg-error-dev libprotobuf-dev protobuf-compiler libgtest-dev
 
 git clone --recursive https://github.com/qwertycoin-org/qwertycoin.git source
-git -C source checkout v2.0.2
+git -C source checkout --detach "$QWC_RELEASE_TAG"
 git -C source submodule update --init --recursive
 
 cmake -S source -B build/linux -G Ninja \
@@ -30,4 +36,3 @@ build/linux/bin/qwertycoin-wallet-rpc --help >/dev/null
 ```
 
 Other distributions/architectures may work but are not claimed as release-validated here. If static archives are unavailable, use this dynamic build instead of forcing `STATIC=ON`.
-

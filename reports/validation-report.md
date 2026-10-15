@@ -1,6 +1,26 @@
 # Validation report
 
-> **Status:** Complete. The current-Core documentation, GitBook revision preview, production merge, and public custom domain are validated.
+> **Status:** The latest-first update is locally validated. GitBook pull-request preview and public publication remain pending review/merge. The previous production publication record is retained below.
+
+## Latest-first validation (2026-10-15)
+
+- **Documentation base:** `1d453bcf7f3611ba1ebc3f185782c3e76522ed5d`
+- **Core stable evidence:** `766839bb49475200977f6302b60c01e34d66e253`
+- **Core development comparison:** `b88bb3781f20e1a0d1427fd6abf41aaac3b8ac5f`
+
+| Gate | Result | Evidence / limitation |
+| --- | --- | --- |
+| Release channels | Pass | Official Core and GUI latest-release metadata resolve to stable, non-prerelease publications; Docker Hub `latest` and its release-specific tag resolve to the same `linux/amd64` digest at the snapshot |
+| Latest-first policy | Pass | `tools/validate_docs.py` rejects fixed Qwertycoin release pages/assets, versioned Qwertycoin archives, numeric Docker release tags and fixed release checkouts in current pages while excluding reports and explicit historical pages |
+| RPC inventory | Pass | Regeneration is byte-identical: 203 development and 203 stable-release registrations; both contain 107 daemon and 96 wallet registrations |
+| Structure and local links | Pass | 89 Markdown pages, complete `SUMMARY.md`, valid local targets/anchors, one H1 per page, balanced fences, migration/config/legacy contracts intact |
+| Rendering | Pass | Pandoc rendered 89/89 pages as standalone HTML; the home, downloads and Docker outputs contain the intended latest-release links and moving-tag guidance |
+| External links | Pass | 449 unique links: 376 immutable Core source links checked against the exact trees and 73 network links returned 2xx/3xx |
+| Python helpers | Pass | All `tools/*.py` files compile; RPC generation is reproducible |
+| Git diff | Pass | `git diff --check` reports no whitespace errors after the documented changes |
+| GitBook preview/publication | Pending | Requires the review PR and must not be inferred from local Markdown rendering |
+
+## Previous publication record (2026-09-30)
 
 **Validation time:** 2026-09-30 05:22 UTC  
 **Environment:** Linux x86_64, Python 3.11.2, Pandoc 2.17.1.1, Git 2.39.5  
@@ -11,7 +31,7 @@
 - **Published merge:** [PR #3](https://github.com/qwertycoin-org/gitbook-docs/pull/3), `9318e1e340706f63b3a0ae9dc062c1a85da8e6de` on `master`
 - **GitBook production revision:** `02wWARNyaYmkQvIWxgCC`
 
-## Matrix
+### Matrix
 
 | Gate | Result | Evidence / limitation |
 | --- | --- | --- |
@@ -30,7 +50,7 @@
 | Production sitemap | Pass | `https://docs.qwertycoin.org/sitemap-pages.xml` contains 88 unique non-preview URLs; 88/88 returned HTTP 200 with no revision URL leaked into the production sitemap |
 | Legacy public paths | Pass | Representative old paths redirect to explicit retirement pages; the production home contains current RandomX/EPoSE content and no CryptoNight or Karbowanec/Bytecoin runtime claim |
 
-## Reproducible commands
+### Reproducible commands
 
 ```bash
 python3 tools/generate_migration_manifest.py

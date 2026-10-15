@@ -1,8 +1,6 @@
 # Getting started
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
-
-> **Published-release track:** Core and GUI `v2.0.2`. Verified 2026-09-29 UTC.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 ## 1. Choose a wallet
 
@@ -15,7 +13,7 @@ There is no supported paper-wallet generator, Zero wallet, or current native mob
 
 ## 2. Download and verify
 
-Download only from the official [Core](https://github.com/qwertycoin-org/qwertycoin/releases/tag/v2.0.2) or [GUI](https://github.com/qwertycoin-org/qwertycoin-gui/releases/tag/v2.0.2) release. Verify the archive against the release `SHA256SUMS` file before extracting it. Checksums detect corruption or substitution relative to that file; they are not publisher signatures.
+Download only from the official [Core latest release](https://github.com/qwertycoin-org/qwertycoin/releases/latest) or [GUI latest release](https://github.com/qwertycoin-org/qwertycoin-gui/releases/latest). Verify the archive against the `SHA256SUMS` file from that same release before extracting it. Checksums detect corruption or substitution relative to that file; they are not publisher signatures.
 
 See [Downloads and Verification](downloads-and-verification.md).
 

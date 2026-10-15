@@ -1,6 +1,6 @@
 # Message signing
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 Message signing proves control of a wallet key for a particular message; it is not a transaction and does not reveal a spend key. It does not prove a legal identity unless the address-to-person binding was established separately.
 

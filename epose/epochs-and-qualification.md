@@ -1,6 +1,6 @@
 # EPoSE epochs and qualification
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 > **Compiled mainnet profile:** 720-block epochs, 60-block anchor depth, rounds at offsets 0/200/400, at least 2 successful rounds.
 

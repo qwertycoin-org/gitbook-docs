@@ -1,8 +1,8 @@
 # CLI wallet
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Verified binary:** `qwertycoin-wallet-cli` from Core `v2.0.2`.
+> **Verified binary:** `qwertycoin-wallet-cli` from the latest stable Core release.
 
 Start against a local daemon:
 

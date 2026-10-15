@@ -1,6 +1,6 @@
 # Daemon HTTP and binary RPC
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 Path RPC posts directly to `/<method>` and does **not** use a JSON-RPC envelope. `.bin` routes use the portable binary archive expected by Core clients; sending JSON to them is invalid.
 

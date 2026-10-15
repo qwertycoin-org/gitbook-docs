@@ -15,6 +15,30 @@ FENCE = re.compile(r"^```", re.MULTILINE)
 H1 = re.compile(r"^# (?!#)", re.MULTILINE)
 HEADING = re.compile(r"^#{1,6}\s+(.+?)\s*#*\s*$", re.MULTILINE)
 MANIFEST_ROW = re.compile(r"^\| `[^`]+` \| \[original]", re.MULTILINE)
+QWC_RELEASE_PATTERNS = {
+    "fixed Qwertycoin release page": re.compile(
+        r"https://github\.com/qwertycoin-org/(?:qwertycoin|qwertycoin-gui)/"
+        r"releases/tag/v\d+\.\d+\.\d+"
+    ),
+    "fixed Qwertycoin release asset": re.compile(
+        r"https://github\.com/qwertycoin-org/(?:qwertycoin|qwertycoin-gui)/"
+        r"releases/download/v\d+\.\d+\.\d+"
+    ),
+    "versioned Qwertycoin archive": re.compile(
+        r"\bqwertycoin(?:-gui)?-v\d+\.\d+\.\d+", re.IGNORECASE
+    ),
+    "numeric Qwertycoin Docker tag": re.compile(
+        r"docker\.io/qwertycoin/qwertycoin:v?\d+\.\d+\.\d+", re.IGNORECASE
+    ),
+    "fixed Qwertycoin release checkout": re.compile(
+        r"\bgit(?:\s+-C\s+\S+)?\s+checkout(?:\s+--detach)?\s+v\d+\.\d+\.\d+"
+    ),
+    "fixed Qwertycoin release statement": re.compile(
+        r"\b(?:Core|GUI|Qwertycoin|qwertycoin-wallet-rpc)\b[^\n]{0,80}"
+        r"(?<![\d.])v?\d+\.\d+\.\d+(?![\d.])",
+        re.IGNORECASE,
+    ),
+}
 
 
 def pages() -> list[Path]:
@@ -110,6 +134,21 @@ def stale_content(all_pages: list[Path]) -> None:
         raise AssertionError("\n".join(errors))
 
 
+def latest_release_contract(all_pages: list[Path]) -> None:
+    errors: list[str] = []
+    for page in all_pages:
+        relative = page.relative_to(ROOT)
+        text = page.read_text()
+        if relative.parts[0] == "reports" or text.startswith("# Historical page:"):
+            continue
+        for line_number, line in enumerate(text.splitlines(), 1):
+            for label, pattern in QWC_RELEASE_PATTERNS.items():
+                if pattern.search(line):
+                    errors.append(f"{relative}:{line_number}: {label}: {line.strip()}")
+    if errors:
+        raise AssertionError("\n".join(errors))
+
+
 def config_contract() -> None:
     text = (ROOT / "gitbook-docs.yaml").read_text()
     required_lines = {
@@ -136,7 +175,7 @@ def migration_contract() -> None:
 def rpc_contract() -> None:
     data = json.loads((ROOT / "rpc-inventory.json").read_text())
     assert len(data["routes"]) == 203
-    assert len(data["release_routes"]) == 201
+    assert len(data["release_routes"]) == 203
     assert sum(row["surface"] == "daemon" for row in data["routes"]) == 107
     assert sum(row["surface"] == "wallet" for row in data["routes"]) == 96
 
@@ -146,6 +185,7 @@ def main() -> int:
     summary_contract(all_pages)
     page_contract(all_pages)
     stale_content(all_pages)
+    latest_release_contract(all_pages)
     config_contract()
     migration_contract()
     rpc_contract()
@@ -155,7 +195,8 @@ def main() -> int:
                 "markdown_pages": len(all_pages),
                 "migration_rows": 60,
                 "rpc_development": 203,
-                "rpc_release": 201,
+                "rpc_release": 203,
+                "latest_release_policy": "pass",
                 "status": "pass",
             },
             sort_keys=True,

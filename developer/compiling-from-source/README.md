@@ -1,15 +1,20 @@
 # Build overview
 
-> **Verified against:** [Pinned source and release revisions](../../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../../reports/source-version-matrix.md).
 
-> **Source tracks:** release `v2.0.2` (`54308d84`) and development `a71c0eb2`.
+> **Source track:** latest stable Core release. Default-branch builds are development builds and must be identified by their exact commit.
 
-Select an explicit tag or 40-character commit and initialize recursive submodules:
+Open the [Core latest release](https://github.com/qwertycoin-org/qwertycoin/releases/latest), copy its stable tag, then select that explicit tag and initialize recursive submodules. Do not substitute the default branch for a published release:
 
 ```bash
+read -r -p "Latest stable Core release tag: " QWC_RELEASE_TAG
+[[ "$QWC_RELEASE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+  echo "invalid stable release tag" >&2
+  exit 1
+}
 git clone --recursive https://github.com/qwertycoin-org/qwertycoin.git
 cd qwertycoin
-git checkout v2.0.2
+git checkout --detach "$QWC_RELEASE_TAG"
 git submodule sync --recursive
 git submodule update --init --recursive
 ```
@@ -29,4 +34,3 @@ Use conservative parallelism on small hosts. Release CI deliberately uses two co
 - [Developer Tests and Troubleshooting](tests-and-troubleshooting.md)
 
 Expected outputs are `qwertycoind`, `qwertycoin-wallet-cli`, and `qwertycoin-wallet-rpc`. The internal CMake target `simplewallet` produces the QWC-named CLI; do not carry its historical target name into user instructions.
-

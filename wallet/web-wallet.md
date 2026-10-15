@@ -1,8 +1,8 @@
 # Web Wallet
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Released behavior verified against:** `wallet.qwertycoin.org` `master` at `05f81c0…`, 2026-09-29 UTC.
+> **Released behavior:** current deployment at <https://wallet.qwertycoin.org/>; the exact reviewed deployment revision is recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 Use only <https://wallet.qwertycoin.org/> and verify the origin before entering any secret. The Web Wallet runs wallet logic in the browser and reaches Qwertycoin data through its deployed gateway. Browser storage, local malware, extensions, phishing, and the selected network path remain part of the threat model.
 

@@ -1,5 +1,7 @@
 # Implementation and release-evidence defects
 
+> **Historical evidence:** this report records the 2026-09 review baseline and intentionally retains exact release versions. Consult current user guides for installation and operation.
+
 > These findings were recorded during documentation validation. The documentation does not change runtime behavior or release artifacts to hide them.
 
 ## Core README release pointer is stale

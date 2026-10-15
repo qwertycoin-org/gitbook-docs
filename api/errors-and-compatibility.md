@@ -1,6 +1,6 @@
 # RPC errors and compatibility
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
 Three layers can fail independently:
 
@@ -12,6 +12,6 @@ Core daemon error codes include invalid parameters/heights/address/blob, busy/in
 
 Never retry a timed-out spending or relay request blindly. First query wallet history/transfer state, derived transaction hash if known, daemon mempool and canonical chain. Retry only after proving the original action did not occur; no general idempotency guarantee is documented.
 
-Legacy aliases in [RPC Inventory](rpc-inventory.md) remain callable only where registered. Do not invent snake_case replacements for historical method names. Release `v2.0.2` lacks both registrations for `get_epose_diagnostics`; clients must feature-detect `get_version` and handle method-not-found.
+Legacy aliases in [RPC Inventory](rpc-inventory.md) remain callable only where registered. Do not invent snake_case replacements for historical method names. Clients must feature-detect `get_version` and handle method-not-found when talking to older nodes rather than assuming every method from the latest release exists remotely.
 
 `walletd` on port 8070 and its historical REST contract are retired and incompatible with current `qwertycoin-wallet-rpc` JSON-RPC.

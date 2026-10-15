@@ -1,8 +1,8 @@
 # Integration examples
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> Examples target authenticated `qwertycoin-wallet-rpc v2.0.2` on loopback `18082`. Placeholder addresses/hashes are non-executable.
+> Examples target authenticated `qwertycoin-wallet-rpc` from the latest stable Core release on loopback `18082`. Placeholder addresses/hashes are non-executable.
 
 ## JSON-RPC shape
 

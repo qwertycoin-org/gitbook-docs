@@ -1,8 +1,8 @@
 # Build on Windows
 
-> **Verified against:** [Pinned source and release revisions](../../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../../reports/source-version-matrix.md).
 
-> **Validated recipe source:** Core `v2.0.2` release workflow, Windows 2025 x86_64 with MSYS2 MinGW64. Release artifacts are unsigned.
+> **Validated recipe source:** latest stable Core release workflow, Windows 2025 x86_64 with MSYS2 MinGW64. Check the current release notes for signing status.
 
 From an MSYS2 **MINGW64** shell:
 
@@ -25,5 +25,4 @@ cmake -S source -B build/windows -G Ninja \
 cmake --build build/windows --target daemon simplewallet wallet_rpc_server --parallel 2
 ```
 
-Run after an explicit `v2.0.2` checkout with recursive submodules. Use the runtime DLLs packaged by the release workflow. Old Visual Studio and 32-bit guides are not current validated tracks.
-
+Run after the explicit latest stable release-tag checkout with recursive submodules described in [Build Overview](README.md). Use the runtime DLLs packaged by the release workflow. Old Visual Studio and 32-bit guides are not current validated tracks.

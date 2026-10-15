@@ -1,6 +1,6 @@
 # Network parameters and emission
 
-> **Verified against:** Core `a71c0eb2…` / `src/cryptonote_config.h`, EPoSE compiled Qwertycoin mainnet profile, 2026-09-29 UTC.
+> **Verified against:** the latest stable Core mainnet profile and `src/cryptonote_config.h`; exact review revisions are recorded in the [Source and version matrix](../reports/source-version-matrix.md).
 
 | Parameter | Mainnet value |
 | --- | --- |

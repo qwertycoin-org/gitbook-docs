@@ -1,8 +1,8 @@
 # Daemon JSON-RPC
 
-> **Verified against:** [Pinned source and release revisions](../reports/source-version-matrix.md), Qwertycoin mainnet where applicable, 2026-09-29.
+> **Verified against:** the latest stable release; exact review revisions are recorded in [Pinned source and release revisions](../reports/source-version-matrix.md).
 
-> **Verified route map:** development `a71c0eb2`; release differences are marked in the generated inventory.
+> **Verified route map:** latest stable release and reviewed development source; any differences are marked in the generated inventory.
 
 POST to `/json_rpc`:
 
@@ -25,6 +25,6 @@ Values above are illustrative, not a captured live chain. The exact schema for e
 - **Outputs/fees/pool:** `get_output_histogram`, `get_fee_estimate`, `get_txpool_backlog`, `get_output_distribution`, `flush_txpool`, `relay_tx`, `get_coinbase_tx_sum`.
 - **Node/peers/admin:** `get_connections`, `set_bans`, `get_bans`, `banned`, `sync_info`, `get_alternate_chains`, `prune_blockchain`, `flush_cache`.
 - **RPC payment:** `rpc_access_info`, `rpc_access_submit_nonce`, `rpc_access_pay`, `rpc_access_tracking`, `rpc_access_data`, `rpc_access_account`. These are active only when the server's RPC-payment configuration enables them.
-- **EPoSE:** `get_epose_info`, `get_service_nodes`, `get_service_node_status`, retired-status `get_service_node_registration_payload`, `get_epose_epoch`, `get_service_rewards`, `get_epose_block_reward`; development-only `get_epose_diagnostics`.
+- **EPoSE:** `get_epose_info`, `get_service_nodes`, `get_service_node_status`, retired-status `get_service_node_registration_payload`, `get_epose_epoch`, `get_service_rewards`, `get_epose_block_reward`; unrestricted authenticated operator diagnostics via `get_epose_diagnostics`.
 
 Methods registered with `!m_restricted` are rejected on a restricted listener. Other methods can still have parameter limits, privacy-reduced responses, authentication requirements, bootstrap restrictions or handler-level failures. Treat `restricted` as a defined route policy, not a synonym for harmless/read-only.
